@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raven's World</title>
+   <!-- Page Notes
+   -
+   -->
+   <!-- THIS IS THE CSS !-->
+        <style>
+            /* user styles */
+
+            /* styles are what change the color and sizes of stuff on your site. */
+
+            /* these are variables that are being used in the code
+    these tended to confuse some people, so I only kept 
+    the images as variables */
+
+            :root {
+                --header-image: url('https://ravens-world.neocities.org/Images/websitr%20under%20construction%20background.png');
+                --body-bg-image: url('https://ravens-world.neocities.org/Images/background_img.gif');
+
+                /* colors */
+                --content: #43256E;
+            }
+
+            /* if you have the URL of a font, you can set it below */
+            /* feel free to delete this if it's not your vibe */
+
+            /* this seems like a lot for just one font and I would have to agree 
+    but I wanted to include an example of how to include a custom font.
+    If you download a font file you can upload it onto your Neocities
+    and then link it! Many fonts have separate files for each style
+    (bold, italic, etc. T_T) which is why there are so many!
+    
+    */
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
+                font-weight: bold;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
+                font-style: italic;
+            }
+
+            @font-face {
+                font-family: Nunito;
+                src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
+                font-style: italic;
+                font-weight: bold;
+            }
+
+            body {
+                font-family: 'Nunito', sans-serif;
+                margin: 0;
+                background-color: #08031A;
+                /* you can delete the line below if you'd prefer to not use an image */
+                background-size: 65px;
+                color: #fceaff;
+                background-image: var(--body-bg-image);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            /* below this line is CSS for the layout */
+
+            /* this is a CSS comment
+    to uncomment a line of CSS, remove the * and the /
+    before and after the text */
+
+
+            /* the "container" is what wraps your entire website */
+            /* if you want something (like the header) to be Wider than
+    the other elements, you will need to move that div outside
+    of the container */
+            #container {
+                max-width: 900px;
+                /* this is the width of your layout! */
+                /* if you change the above value, scroll to the bottom
+      and change the media query according to the comment! */
+                margin: 0 auto;
+                /* this centers the entire page */
+            }
+
+            /* the area below is for all links on your page
+    EXCEPT for the navigation */
+            #container a {
+                color: #ED64F5;
+                font-weight: bold;
+                /* if you want to remove the underline
+      you can add a line below here that says:
+      text-decoration:none; */
+            }
+
+            #header {
+                width: 100%;
+                background-color: #5e4e8c;
+                /* header color here! */
+                height: 150px;
+                /* this is only for a background image! */
+                /* if you want to put images IN the header, 
+      you can add them directly to the <div id="header"></div> element! */
+                background-image: var(--header-image);
+                background-size: 100%;
+            }
+
+            /* navigation section!! */
+            #navbar {
+                height: 40px;
+                background-color: #13092D;
+                /* navbar color */
+                width: 100%;
+            }
+
+            #navbar ul {
+                display: flex;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                justify-content: space-evenly;
+            }
+
+            #navbar li {
+                padding-top: 10px;
+            }
+
+            /* navigation links*/
+            #navbar li a {
+                color: #ED64F5;
+                /* navbar text color */
+                font-weight: 800;
+                text-decoration: none;
+                /* this removes the underline */
+            }
+
+            /* navigation link when a link is hovered over */
+            #navbar li a:hover {
+                color: #a49cba;
+                text-decoration: underline;
+            }
+
+            #flex {
+                display: flex;
+            }
+
+            /* this colors BOTH sidebars
+    if you want to style them separately,
+    create styles for #leftSidebar and #rightSidebar */
+            aside {
+                border: 10px solid transparent;
+                border-image: url(https://ravens-world.neocities.org/Images/Error%20page%20background.jpeg) 50 round;
+                background-color: #241445;
+                width: 200px;
+                padding: 20px;
+                font-size: smaller;
+                /* this makes the sidebar text slightly smaller */
+            }
+
+
+            /* this is the color of the main content area,
+    between the sidebars! */
+            main {
+                border: 10px solid transparent;
+                border-image: url(https://ravens-world.neocities.org/Images/Error%20page%20background.jpeg) 50 round;
+                background-color: #43256E;
+                flex: 1;
+                padding: 20px;
+                order: 2;
+            }
+
+            /* what's this "order" stuff about??
+    allow me to explain!
+    if you're using both sidebars, the "order" value
+    tells the CSS the order in which to display them.
+    left sidebar is 1, content is 2, and right sidebar is 3! */
+
+            */ #leftSidebar {
+                order: 1;
+            }
+
+            #rightSidebar {
+                order: 3;
+                padding: 15px;
+            }
+
+            footer {
+                background-color: #13092D;
+                /* background color for footer */
+                width: 100%;
+                height: 40px;
+                padding: 10px;
+                text-align: center;
+                /* this centers the footer text */
+            }
+
+            h1,
+            h2,
+            h3 {
+                color: #ED64F5;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            strong {
+                /* this styles bold text */
+                color: #ED64F5;
+            }
+
+            /* this is just a cool box, it's the darker colored one */
+            .box {
+                background-color: #13092D;
+                border: 1px solid #ED64F5;
+                padding: 10px;
+            }
+
+            /* CSS for extras */
+
+            #topBar {
+                marquee-direction: left;
+                width: 100%;
+                height: 30px;
+                padding: 10px;
+                font-size: smaller;
+                background-color: #13092D;
+            }
+            .badge {
+              width: 75px;
+              height: 39px;
+              padding: 5px;
+      
+              }
+              
+              #niuplayer {
+                border: solid 5px black;
+                padding: 1em;
+                border-radius:20px;
+                background-image: url(https://64.media.tumblr.com/65505d1d74c501d1b880a8c1af9041b7/tumblr_ptnktg5vhO1v0460n_400.gifv);
+                background-size: contain;
+                        }
+              
+              #niuplayer button {
+                color: crimson;
+                background-color: rebeccapurple;
+                border: solid 2.5px black;
+                padding: 1em;
+                border-radius: 20px;
+                        }
+
+
+            /* BELOW THIS POINT IS MEDIA QUERY */
+
+            /* so you wanna change the width of your page? 
+    by default, the container width is 900px.
+    in order to keep things responsive, take your new height,
+    and then subtrack it by 100. use this new number as the 
+    "max-width" value below
+    */
+
+            @media only screen and (max-width: 800px) {
+                #flex {
+                    flex-wrap: wrap;
+                }
+
+                aside {
+                    width: 100%;
+                }
+
+                /* the order of the items is adjusted here for responsiveness!
+      since the sidebars would be too small on a mobile device.
+      feel free to play around with the order!
+      */
+                main {
+                    order: 1;
+                }
+
+                #leftSidebar {
+                    order: 2;
+                }
+
+                #rightSidebar {
+                    order: 3;
+                }
+
+                #navbar ul {
+                    flex-wrap: wrap;
+                }
+            }
+        </style>
+    
+  </head>
+  <body>
+   <div id="container"><div id="topBar"><marquee bahaviour= "scroll" direction ="left"> For more audio apetisers look no further than <a href="https://www.youtube.com/channel/UCCPezTi0naA0VPplrf8ybBQ">within</a> </marquee></div><div id="header" style="height: 192px;"></div>
+            <div id="headerArea">
+                
+                <nav id="navbar" style="margin-bottom: 10px;">
+                    <ul>
+                        <li><a href="https://ravens-world.neocities.org/Is-it-Home">Home?</a></li>
+                        <li><a href="#">Blog... soon</a></li>
+                        <li><a href="#">There</a></li>
+                        <li><a href="#">might</a></li>
+                        <li><a href="#">be somthing</a></li>
+                        <li><a href="#">here, eventually</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div id="flex">
+                
+                <main>
+                    <h1>Under construction!!!!!</h1>
+                    <h4><strong>Aren't we all a bit?</strong></h4>
+                    <p>Anyway, Hi I'm Raven and this is the first website I've built, cool I'snt it :3</p>
+                    <p>Well this page was built with the help of Sadgrl's layout builder so it should be a bit cleaner than if I'd done it all myself</p>
+                    <p>Here you can find <a href="https://learn.sadgrl.online/understanding-tweaking-my-layout-maker/" target="_blank">a guide</a> for the layout builder which goes over the structure of how this layout is built, along with some specific tips on how to edit it in certain ways.</p>
+                    <p>Hopefully soon enough I'll get the blog up and running and linked to this page so you can check it out, there's even a Guestbook!!</p>
+                    
+                    <hr>
+
+                    <p>So what exactly do I do here</p>
+                    <p>Honestly I don't really know, My blog is just a dumping ground for my random ass thoughts, you might enjoy it you might not</p>
+
+                    <p>There might be some poetry, if there is be careful, I can get a bit emotional so if your in the same place as me it might not be an amazing thing to read, or it might be relatable, I also have a Tumblr blog talking about some weird excperieances I had <em><del>Venturing into the <a href= "https://mossy-dreams.tumblr.com/">Dream Kingdom</a></del></em></p>
+
+
+                </main>
+                
+            <aside id="rightSidebar" style="margin-left: 10px;"><h2>Updates</h2>
+            <div class="box">
+                <p></p>
+                <ul style="padding-left:10px;">
+                    <li>Eventually You'll see some updates here</li>
+                    <li>This page was last worked on</li>
+                    <li>On the 25th of july 2023</li>
+                    <li>The player below has some nice music, really sets the scene</li>
+                </ul>
+            </div>
+            <div id="niuplayer">
+              <div id="player" playlist="PLckJpXDRd_gOS9YMXAYHYjP4SvHiwI882" shuffle="yes"></div>
+              <button onclick="pauseplay()">play/pause</button>
+              <button onclick="player.previousVideo()">prev</button>
+              <button onclick="player.nextVideo()">next</button>
+              <script src="niumusicplayer.js">
+              </script>
+          </div>
+
+            </aside><aside id="leftSidebar" style="margin-right: 10px;"><h2>Badges!</h2>
+            <div class="box">
+                <p>Here are some badges that I have collected and during my time floating around the internet</p>
+                <br>
+                <p> I hope they lead you on wonderful journeys</p>
+            </div>
+            <a href="https://neocities.org"><img src="/neocities.png" class="badge"></a>
+            <a href= "https://lgbtqia.fandom.com/wiki/LGBTQIA%2B_Wiki"><img src="https://ravens-world.neocities.org/Images/gender.jpg" class= "badge"></a>
+            </aside></div>
+            <footer id="footer" style="margin-top: 10px;">Made with <a href= "https://sadgrl.online/projects/layout-builder/">Sadgrl's Layout Builder</a> and some tinkering</footer>
+        </div>
+    
+
+  </body>
+</html>
