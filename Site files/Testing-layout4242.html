@@ -125,7 +125,7 @@ body, html {
 
 body {
     background: var(--bg-image) top / cover no-repeat;
-    font-family: National Park, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     color: var(--main);
     font-size: 0.95em;
     scrollbar-color: var(--main) var(--background); /* Mozilla scrollbar fallback */
@@ -398,7 +398,15 @@ ul#title {
           margin: 3vh auto;
       }
   }
-
+/* This is the style to create a dash list (for use in the blog intro) might use again in other places*/
+    .Dash-list {
+        list-style: none;
+        padding: 0;
+    }
+    .Dash-list > div ::before {
+        content: "–";
+        margin-right: 8px;
+    }
     </style>
 </head>
 
@@ -424,29 +432,39 @@ href="https://webneko.net">Neko</a></h1>
         <div class="main">  
             <!--SAFE TO EDIT
                 Note: theme only supports one main class. if you'd like to add more "main" boxes you can add a main-wrapper class that uses flex columns (like the side-wrapper) -->
-            <h1>Celebrating pride</h1>
-            <blockquote>June 09, 2023</blockquote>
-            <p>Welcome to the <mark>Rainbow page theme</mark> preview! This theme is based on the original 1978 rainbow flag designed by Gilbert Baker. It has eight stripes, two more than the popular modern iteration.</p>
-            <figure> <img class="img-fluid" src="https://images.squarespace-cdn.com/content/v1/5b53b13285ede173115cb784/1623105145619-H2XVFVY8R1T9EPC1WADE/Rainbow+flag+courtesey+of+Baker+estate.jpg">
-                <figcaption>An image of the original flag, courtesy of the Baker estate.</figcaption>
-            </figure>            
-            <p>Each stripe's color is symbolic: Hot pink is for sex, red for life, orange for healing, yellow for sunlight, green for nature, turquoise for magic/art, indigo for serenity, and violet for spirit. </p>
-            <p>Due to dye cost issues that prevented mass production of the flag and subsequent practical considerations, the hot pink and turquoise stripes were both dropped. But this is the internet, where these are non-issues, so long live sex and magic!</p>
-            <hr>
-            <h1>Theme features</h1>            
-            <ul>
-                <li>Pride flag theme switcher (uses Javascript)</li>
-                <li>Mobile responsive layout</li>
-                <li>Customizable sidebar image</li>
-                <li>Customizable background image</li>
-                <li>Customizable box background color</li>
-                <li>Custom responsive image class <code>img-fluid</code></li>
-                <li>Styling of default HTML elements such as the blockquote, hr, code, audio, and mark tags.</li>
-                <li>Make new sidebar boxes by creating a div within the side-wrapper class. You can name it whatever you want; it will inherit the sidebar box styling.</li>
-            </ul>
-            <hr>
-            <h1>Credits</h1>
-            <ul>
+            <h1>Welcome to my blog!</h1>
+            <blockquote>August 12, 2023</blockquote>
+           <h3>A  space for me to spread my wings and get weird, what will you find here </h3>
+           <div class= "Dash-list">
+                <div>Poetry</div>
+                <div>Scattered Thoughts</div>
+                <div>Reviews</div>
+                <div><em><del> Maybe even a Diary</del></em></div>
+                <div>An Escape?</div>
+           </div>
+           <hr>
+           <p id="Rain_BlogIntro">Here have some rain while you read</p>
+           <!-- Put a draggable img here with a weirdcore landscape and js rain effect in the background, if you can make it look like a window in an old windows OS -->
+           <hr>
+           <h2>Now for some information about me:</h2>
+           <h3>Bio:</h3>
+           <p>"Long have I lived for an escape of these burning bones" – The person I once was, A quicksand pit I can never Escape</p>
+           <p></p>
+           <p>"I do not burn my lungs with the sweet smelling rot, for far sweeter nectar runs bitter and black through my veins" – The person I now am, pulling apart at the seems</p>
+           <p></p>
+           <p>"The flowers grow from my soul obliterating my loving decay, the mycelium holding together my bones is gone" – The person I hope to never be, Healing is Hard.</p>
+           <p></p>
+           <p></p>
+           <p>The gallery is coming soon, which is exciting, unfortunately I do not have that much artistic talent unlike <del>Autumn</del> so most of the things there will just be 
+            screen shots of cool things I want to share and that I think fits with the vibe,</p>
+            <p></p>
+            <p>If your looking for more in depth insights into my personality before then you can check out my favourite playlists here <!-- Link to youtube chanel-->
+                And some Rules that I live by <a href="https://ravens-world.neocities.org/The-Rules">Here</a> </p> 
+            <p><a href="#" id="Link_1stBlogPost"> >>> This link will lead to my first blog post once it is up </a></p>
+
+            <ul hidden>
+                <!-- These ate the credits for the origional page layout, all  of these elements except for the pride Badges have been removed in the version for this website,
+                If you want to check out the origional template Look for the rainbow page theme by  nenrikido.neocities.or -->
                 <li>Body font: <a href="https://nationalparktypeface.com/">National Park</a></li>
                 <li>Title font: <a href="https://www.fontspace.com/pretty-kelly-font-f93692">Pretty Kelly</a></li>
                 <li>Background mural: <a href="https://www.hovia.com/products/70s-rainbow-wave-retro-wallpaper-mural-m/">Hovia</a></li>

@@ -1,0 +1,27 @@
+//DO NOT EDIT//
+<!-- Style so that all txt is in times new Roman font (done)--> 
+Welcome to my blog,
+A  space for me to spread my wings and get weird, what will you find here 
+– Poetry
+– Scattered thoughts
+– Reviews
+– And maybe even a Diary <!-- strike-through and emphasis here -->
+– An Escape?
+insert horizontal rule
+here have some rain while you read
+<!-- Put a draggable img here with a weirdcore landscape and js rain effect in the background, if you can make it look like a window in an old windows OS -->
+insert another horizontal rule
+Now for some information about me:
+Bio:
+
+"Long have I lived for an escape of these burning bones" – The person I once was, A quicksand pit I can never Escape
+"I do not burn my lungs with the sweet smelling rot, for far sweeter nectar runs bitter and black through my veins" – The person I now am, pulling apart at the seems
+"The flowers grow from my soul obliterating my loving decay, the mycelium holding together my bones is gone" – The person I hope to never be, Healing is Hard.
+
+The gallery is coming soon, which is exciting, unfortunately I do not have that much artistic talent unlike <strike>Autumn</strike> so most of the things there will just be 
+screen shots of cool things I want to share and that I think fits with the vibe,
+
+If your looking for more in depth insights into my personality before then you can check out my favourite playlists here <!-- Link to youtube chanel-->
+And some Rules that I live by here <!-- Link The-Rules.html-->
+
+>>> This link will lead to my first blog post once it is up <!-- Make the href # for now until first post is done-->
