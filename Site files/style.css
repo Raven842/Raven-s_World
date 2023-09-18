@@ -253,19 +253,19 @@ input[type="reset"]:disabled,
 }
 
 .title-bar-controls button[aria-label="Minimize"] {
-  background-image: svg-load("./icon/minimize.svg");
+  background-image: url("https://conceptdraw.com/a2647c3/p6/preview/640/pict--minimize-window-button-window-elements-vector-stencils-library");
   background-repeat: no-repeat;
   background-position: bottom 3px left 4px;
 }
 
 .title-bar-controls button[aria-label="Maximize"] {
-  background-image: svg-load("./icon/maximize.svg");
+  background-image: url("https://conceptdraw.com/a2647c3/p8/preview/640/pict--maximize-window-button-window-elements-vector-stencils-library");
   background-repeat: no-repeat;
   background-position: top 2px left 3px;
 }
 
 .title-bar-controls button[aria-label="Restore"] {
-  background-image: svg-load("./icon/restore.svg");
+  background-image: svg-load("https://conceptdraw.com/a2647c3/p7/preview/640/pict--restore-window-button-window-elements-vector-stencils-library");
   background-repeat: no-repeat;
   background-position: top 2px left 3px;
 }
