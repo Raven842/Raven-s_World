@@ -1,17 +1,92 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Gallery</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Replace with the path to your CSS file -->
+    <title>Windows 98 Desktop</title>
     <style>
+        /* Additional CSS for menu bar and files */
+        .menu-bar {
+            background-color: var(--dialog-blue);
+            color: var(--button-highlight);
+            padding: 3px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: var(--border-raised-outer), var(--border-raised-inner);
+        }
 
+        .desktop {
+            padding: 50px;
+        }
+
+        .file {
+            display: inline-block;
+            margin: 20px;
+            padding: 50px;
+            background-image: url('https://64.media.tumblr.com/d519f7393d9ee25a0a8a0835ef93c488/8e467617da3b8b01-63/s540x810/ba5279820e44357b83ac1fdb6824e5a52ec4162f.png'); /* Replace with your image file path */
+            background-size: 132px 132px; /* Adjust the size of your icon as needed */
+            background-repeat: no-repeat;
+            background-position: center center;
+            cursor: pointer;
+            
+        }
+
+        /* Additional CSS for open file content */
+        .file-content {
+            display: none;
+            background-color: var(--surface);
+            box-shadow: var(--border-window-outer), var(--border-window-inner);
+            padding: 10px;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
     </style>
 </head>
-
-<html>
-    <body>
+<body>
+    <div class="window">
         <div class="title-bar">
-            <p class="title-bar-text">This is a test of 98.css</p>
+            <div class="title-bar-text">Gallery Info</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
         </div>
-    </body>
+        <div class="window-body desktop">
+            <!-- Openable files -->
+            <div class="file" id="file1"></div>
+            <div class="file" id="file2"></div>
+            <div class="file" id="file3"></div>
+        </div>
+    </div>
+    <div class="menu-bar">
+        <!-- Menu bar items -->
+        <span>File</span> | <span>Edit</span> | <span>View</span> | <span>Help</span>
+    </div>
+    <!-- JavaScript to open and close files -->
+    <script>
+        const files = document.querySelectorAll('.file');
+
+        files.forEach(file => {
+            file.addEventListener('click', () => {
+                const fileContent = document.createElement('div');
+                fileContent.className = 'file-content';
+                fileContent.innerHTML = `
+                    <h3>${file.textContent}</h3>
+                    <p>This is the content of ${file.textContent}.</p>
+                    <button id="closeFile">Close</button>
+                `;
+                document.body.appendChild(fileContent);
+
+                const closeFileButton = fileContent.querySelector('#closeFile');
+                closeFileButton.addEventListener('click', () => {
+                    document.body.removeChild(fileContent);
+                });
+            });
+        });
+    </script>
+</body>
 </html>
