@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="style.css"> <!-- Replace with the path to your CSS file -->
     <title>Windows 98 Desktop</title>
     <style>
+        html {
+            background-image: url("https://wallpapercave.com/wp/wp7135101.jpg");
+        }
+        
         /* Additional CSS for menu bar and files */
         .menu-bar {
             background-color: var(--dialog-blue);
@@ -46,23 +50,14 @@
     </style>
 </head>
 <body>
-    <div class="window">
-        <div class="title-bar">
-            <div class="title-bar-text">Gallery Info</div>
-            <div class="title-bar-controls">
-                <button aria-label="Minimize"></button>
-                <button aria-label="Maximize"></button>
-                <button aria-label="Close"></button>
-            </div>
-        </div>
-        <div class="window-body desktop">
+    
             <!-- Openable files -->
             <div class="file" id="file1"></div>
             <div class="file" id="file2"></div>
             <div class="file" id="file3"></div>
-        </div>
-    </div>
-    <div class="menu-bar">
+        
+            <!-- File Conetent-->
+            <div class="file-content">test</div>
         <!-- Menu bar items -->
         <span>File</span> | <span>Edit</span> | <span>View</span> | <span>Help</span>
     </div>

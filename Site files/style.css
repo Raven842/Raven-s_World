@@ -271,9 +271,9 @@ input[type="reset"]:disabled,
 }
 
 .title-bar-controls button[aria-label="Help"] {
-  background-image: svg-load("./icon/help.svg");
+  background-image: url("https://conceptdraw.com/a2647c3/p5/preview/640/pict--close-window-button-window-elements-vector-stencils-library");
   background-repeat: no-repeat;
-  background-position: top 2px left 5px;
+  background-position: center;
 }
 
 .title-bar-controls button[aria-label="Close"] {
