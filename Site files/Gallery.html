@@ -11,14 +11,54 @@
         }
         
         /* Additional CSS for menu bar and files */
+        .body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
         .menu-bar {
-            background-color: var(--dialog-blue);
-            color: var(--button-highlight);
+            background-color: #008080; /* Menu bar background color */
+            color: white; /* Menu bar text color */
             padding: 3px;
             position: fixed;
             bottom: 0;
             width: 100%;
-            box-shadow: var(--border-raised-outer), var(--border-raised-inner);
+            box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+        }
+
+        .menu-item {
+            display: inline-block;
+            padding: 3px 12px;
+            cursor: pointer;
+        }
+
+        .menu-item:hover {
+            background-color: #005555; /* Hover background color */
+        }
+
+        /* Submenu */
+        .submenu {
+            display: none;
+            position: absolute;
+            background-color: #008080; /* Submenu background color */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .menu-item:hover .submenu {
+            display: block;
+        }
+
+        .submenu-item {
+            display: block;
+            padding: 5px 10px;
+            color: white; /* Submenu item text color */
+            text-decoration: none;
+        }
+
+        .submenu-item:hover {
+            background-color: #005555; /* Submenu item hover background color */
         }
 
         .desktop {
@@ -59,8 +99,24 @@
             <!-- File Conetent-->
             <div class="file-content">test</div>
         <!-- Menu bar items -->
-        <span>File</span> | <span>Edit</span> | <span>View</span> | <span>Help</span>
-    </div>
+        <div class="menu-bar">
+            <div class="menu-item">File
+                <div class="submenu">
+                    <a class="submenu-item" href="#">New</a>
+                    <a class="submenu-item" href="#">Open</a>
+                    <a class="submenu-item" href="#">Save</a>
+                    <a class="submenu-item" href="#">Exit</a>
+                </div>
+            </div>
+            <div class="menu-item">Edit</div>
+            <div class="menu-item">View
+                <div class="submenu">
+                    <a class="submenu-item" href="#">Toolbar</a>
+                    <a class="submenu-item" href="#">Status Bar</a>
+                </div>
+            </div>
+            <div class="menu-item">Help</div>
+        </div>
     <!-- JavaScript to open and close files -->
     <script>
         const files = document.querySelectorAll('.file');
