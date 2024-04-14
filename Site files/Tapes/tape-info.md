@@ -4,3 +4,4 @@ My Diary, Make of them What you Will
 > Tape 01:  Found
 > Tape 02: let us lay down in the sunset like a patient <em>euthanised<em> upon a table, and alone as the last of us drifts into the dying light
 > Diary entry 1, dreams: A quilt of memories
+> Diary entry 2, hopes: drowning, going down together
